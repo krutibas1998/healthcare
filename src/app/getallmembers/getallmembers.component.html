@@ -1,0 +1,90 @@
+ <div class="container">
+
+    <h1 class="text-center bookt">HealthCare Member Portal</h1>
+    <br>
+    <h2 class="text-center  book">Search Member</h2>
+    <div class="box">
+
+        <div>
+            <label class="lab">Member Id</label>
+            <input type="text" class="form-control inp" [(ngModel)]="searchmember.UserId" />
+        </div>
+
+        <br>
+
+        <button type="submit" class="buy" (click)="onSubmit()">Search</button>
+
+    </div>
+
+
+    <div>
+        <div class="table-responsive p-5">
+            <table class="table" *ngIf="resp.length">
+                <thead class="table-primary">
+                    <tr>
+                        <th>Member Id</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Assigned Physician</th>
+                        <th>Claim Id</th>
+                        <th>Claim Ammount</th>
+                        <th>Claim Date</th>
+                        <th>Sumbit Claim
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of resp">
+                        <td>{{item.memberId}}</td>
+                        <td>{{item.firstName}}</td>
+                        <td>{{item.lastName}}</td>
+                        <td>{{item.physician}}</td>
+                        <td>{{item.claimId}}</td>
+                        <td>{{item.claimAmmount}}</td>
+                        <td>{{item.claimDate}}</td>
+                        <td><a (click)='onSubmit()' class="btn btn-primary" routerLink="/addclaim">Sumbit Claim</a>
+                        </td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> 
+
+    <div>
+        <div class="table-responsive p-5" >
+            <table class="table" *ngIf="addmembers.length">
+                <thead class="table-primary">
+                    <tr>
+                        <th>Member Id</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Assigned Physician</th>
+                        <!-- <th>Claim Id</th>
+                        <th>Claim Ammount</th>
+                        <th>Claim Date</th> -->
+                        <th>Sumbit Claim
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let result of addmembers">
+                        <td>{{result.userId}}</td>
+                        <td>{{result.firstName}}</td>
+                        <td>{{result.lastName}}</td>
+                        <td>{{result.physician}}</td>
+                        <!-- <td>{{item.claimId}}</td>
+                        <td>{{item.claimAmmount}}</td>
+                        <td>{{item.claimDate}}</td> -->
+                        <td><a (click)='onSubmit()' class="btn btn-primary" routerLink="/addclaim">Sumbit Claim</a>
+                        </td>
+                        <!-- <td><a (click)='onclick()' router-Link="/addclaim"></a></td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+</div>

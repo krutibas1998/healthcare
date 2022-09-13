@@ -1,0 +1,42 @@
+<h1 class="text-center bookt">HealthCare Member Portal</h1>
+<br>
+<h2 class="text-center  book">Claim Submission</h2>
+<div class="box">
+
+    <div>
+        <label class="lab">Member Id</label>
+        <input type="text" class="form-control inp" [(ngModel)]="addclaim.UserId" />
+    </div>
+
+    <div>
+        <label class="lab">Claim Type</label>
+        <select class="form-control inp" [(ngModel)]="addclaim.ClaimType" >
+            <option value="Vision">Vision</option>
+            <option value="Dental">Dental</option>
+            <option value="Medical">Medical</option>
+        </select>
+    </div>
+    
+    <div>
+        <label class="lab">Claim Ammount</label>
+        <input type="text" class="form-control inp" [(ngModel)]="addclaim.ClaimAmmount" />
+    </div>
+
+    <div>
+        <label class="lab">Remarks</label>
+        <input type="text" class="form-control inp" [(ngModel)]="addclaim.Remarks" />
+    </div>
+
+    <div>
+        <label class="lab">Claim Date</label>
+        <input type="date" class="form-control inp" [(ngModel)]="addclaim.ClaimDate" />
+    </div>
+
+    <br>
+
+    <button type="submit" class="buy" (click)="onSubmit()">Save</button>
+    
+    
+
+</div>
+

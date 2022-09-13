@@ -1,0 +1,61 @@
+<h1 class="text-center bookt">HealthCare Member Portal</h1>
+<br>
+<h2 class="text-center  book">Member Registration</h2>
+<div class="box">
+
+    <div>
+        <label class="lab">FirstName</label>
+        <input type="text" class="form-control inp" [(ngModel)]="addmember.FirstName" />
+    </div>
+    
+    <div>
+        <label class="lab">LastName</label>
+        <input type="text" class="form-control inp" [(ngModel)]="addmember.LastName" />
+    </div>
+
+    <div>
+        <label class="lab">UserName</label>
+        <input type="text" class="form-control inp" [(ngModel)]="addmember.UserName" />
+    </div>
+
+    <div>
+        <label class="lab">Address</label>
+        <input type="text" class="form-control inp" [(ngModel)]="addmember.Address" />
+    </div>
+
+    <div>
+        <label class="lab">City</label>
+        <input type="text" class="form-control inp" [(ngModel)]="addmember.City" />
+    </div>
+
+    <div>
+        <label class="lab">Email</label>
+        <input type="text" class="form-control inp" [(ngModel)]="addmember.Email" />
+    </div>
+
+    <div>
+        <label class="lab">DOB</label>
+        <input type="date" class="form-control inp" [(ngModel)]="addmember.DateOfBirth" />
+    </div>
+
+    <div>
+        <label class="lab">State</label>
+        <input type="text" class="form-control inp" [(ngModel)]="addmember.State" />
+    </div>
+
+    <div>
+        <label class="lab">Physician</label>
+        <select class="form-control inp" [(ngModel)]="addmember.Physician" >
+            <option value="John">John</option>
+            <option value="Mital">Mital</option>
+            <option value="Sam">Sam</option>
+            <option value="Hari">Hari</option>
+        </select>
+    </div>
+    <br>
+
+    <button type="submit" class="buy" (click)="onSubmit()">Save</button>
+    
+    
+
+</div>
