@@ -12,6 +12,7 @@ import { GetAllmember } from '../model/getallmembers.model';
 export class GetAllmemberService {
     baseUrl = 'http://localhost:5234/api/Admin/SearchUser'
     baseUrl1 = 'http://localhost:5234/api/Admin'
+    
 
     constructor(private http: HttpClient) { }
 
