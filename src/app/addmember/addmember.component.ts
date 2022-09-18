@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Addmember } from '../model/addmember.model';
 import { AddmemberService } from '../services/addmember.service';
 
+
 @Component({
   selector: 'app-addmember',
   templateUrl: './addmember.component.html',
@@ -23,8 +24,8 @@ export class AddmemberComponent implements OnInit {
     Physician:''
 
   }
-
-  msg: any = "";
+  resp:any="";
+  msg: any = " ";
   ngOnInit(): void {
   }
 
@@ -32,12 +33,15 @@ export class AddmemberComponent implements OnInit {
     this.AddmemberService.addAllMember(this.addmember)
       .subscribe(
         response => {
-          console.log(response);
+          this.resp=response;
+          console.log(this.resp);
+          this.msg = "Member Added Successfuly";
         }
       );
   }
 
 }
+ 
 
  
 

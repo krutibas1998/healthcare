@@ -5,26 +5,27 @@
 
     <div>
         <label class="lab">UserName</label>
-        <input type="text" class="form-control inp" [(ngModel)]="signup.UserName" />
+        <input type="text" class="form-control inp" name="username" #username="ngModel" required
+            [(ngModel)]="signup.UserName" />
+        <div *ngIf="username.errors?.['required'] && username.touched" class="text-danger">UserName is required</div>
     </div>
-    
+
     <div>
         <label class="lab">Password</label>
-        <input type="password" class="form-control inp" [(ngModel)]="signup.Password" />
+        <input type="password" class="form-control inp" name="password" #password="ngModel" required
+            [(ngModel)]="signup.Password" />
+        <div *ngIf="password.errors?.['required'] && password.touched" class="text-danger">Password is required</div>
     </div>
 
     <div>
         <label class="lab">UserType</label>
-        <!-- <input type="text" class="form-control inp" [(ngModel)]="signup.UserType" /> -->
-        <select class="form-control inp" [(ngModel)]="signup.UserType" >
-        <option value="Admin">Admin</option>
-        <option value="Member">Member</option>
-    </select>
+        <select class="form-control inp" [(ngModel)]="signup.UserType">
+            <option value="Admin">Admin</option>
+            <option value="Member">Member</option>
+        </select>
     </div>
     <br>
 
-    <button type="submit" class="buy" (click)="onSubmit()">Signup</button>
-    
-    
+    <button type="submit" class="buy" (click)="onSubmit()" routerLink="">Signup</button>
 
 </div>

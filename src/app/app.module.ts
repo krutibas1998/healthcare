@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +13,8 @@ import { SumbitclaimComponent } from './sumbitclaim/sumbitclaim.component';
 import { GetallmembersComponent } from './getallmembers/getallmembers.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
 import { MemberpageComponent } from './memberpage/memberpage.component';
+import { MemeberdetailsComponent } from './memeberdetails/memeberdetails.component';
+
 
 @NgModule({
   declarations: [
@@ -24,13 +26,16 @@ import { MemberpageComponent } from './memberpage/memberpage.component';
     SumbitclaimComponent,
     GetallmembersComponent,
     AdminpageComponent,
-    MemberpageComponent
+    MemberpageComponent,
+    MemeberdetailsComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

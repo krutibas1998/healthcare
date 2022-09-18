@@ -15,7 +15,6 @@ export class LoginService {
     addUser(login: Login): Observable<Login[]> {
 
         return this.http.post<Login[]>(this.baseUrl, login);
-  
         
     }
 }

@@ -13,7 +13,8 @@ export class AddmemberService {
   constructor(private http: HttpClient) { }
 
   addAllMember(member: Addmember): Observable<Addmember[]> {
-    member.UserId = 0;//'00000000-0000-0000-0000-000000000000';
+
+    member.UserId = 0;
     return this.http.post<Addmember[]>(this.baseUrl, member,
       {
         headers: new HttpHeaders({

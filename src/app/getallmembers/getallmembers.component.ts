@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GetAllmemberService } from '../services/getallmembers.service'; 
+import { GetAllmemberService } from '../services/getallmembers.service';
 import { GetAllmember } from '../model/getallmembers.model';
 import { Searchmember } from '../model/searchmember.model';
 
@@ -9,7 +9,7 @@ import { Searchmember } from '../model/searchmember.model';
   styleUrls: ['./getallmembers.component.css']
 })
 export class GetallmembersComponent implements OnInit {
-  addmembers:GetAllmember[]=[];
+  addmembers: GetAllmember[] = [];
   addmember: GetAllmember = {
     userId: 0,
     userName: '',
@@ -20,34 +20,34 @@ export class GetallmembersComponent implements OnInit {
     email: '',
     dateOfBirth: '',
     state: '',
-    physician:'',
-    claimAmmount:0,
-    claimDate:'',
-    claimId:'',
-    
+    physician: '',
+    claimAmmount: 0,
+    claimDate: '',
+    claimId: '',
+
 
   }
-  
+
   searchmember: Searchmember = {
-    UserId:0
+    UserId: 0
   }
   resp: any = {};
-  constructor(private GetAllmemberService:GetAllmemberService) { }
-  result:any="";
+  constructor(private GetAllmemberService: GetAllmemberService) { }
+  result: any = "";
   ngOnInit(): void {
     this.getAllMembers();
-    this.result=localStorage.getItem("token");
+    this.result = localStorage.getItem("token");
   }
 
   getAllMembers() {
     this.GetAllmemberService.getAllMembers()
-    .subscribe(
-      response => { this.addmembers = response
-        // localStorage.setItem("memberId", this.resp[0].userId);
-        // localStorage.getItem("memberId")?.toString();
-      }
-      
-    );
+      .subscribe(
+        response => {
+          this.addmembers = response
+
+        }
+
+      );
   }
 
 
@@ -57,10 +57,7 @@ export class GetallmembersComponent implements OnInit {
       console.log(this.resp)
       localStorage.setItem("memberId", this.resp[0].memberId);
       localStorage.getItem("memberId")?.toString();
-      // console.log(localStorage.getItem("UserId")?.toString());
-     
 
-      
     });
   }
 

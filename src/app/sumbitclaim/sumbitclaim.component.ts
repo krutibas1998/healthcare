@@ -8,19 +8,18 @@ import { SumbitclaimService } from '../services/sumbitclaim.service';
   styleUrls: ['./sumbitclaim.component.css']
 })
 export class SumbitclaimComponent implements OnInit {
-  addclaim:Sumbitclaim={
-    UserId:'',
-    ClaimType:'',
-    ClaimAmmount:0,
-    Remarks:'',
-    ClaimDate:''
+  addclaim: Sumbitclaim = {
+    UserId: '',
+    ClaimType: '',
+    ClaimAmmount: 0,
+    Remarks: '',
+    ClaimDate: ''
   }
 
-  constructor(private SumbitclaimService:SumbitclaimService) { }
-  result:any="";
+  constructor(private SumbitclaimService: SumbitclaimService) { }
+  result: any = "";
   ngOnInit(): void {
-    this.addclaim.UserId= localStorage.getItem("memberId")?.toString();
-    //  console.log( localStorage.getItem("UserId"));
+    this.addclaim.UserId = localStorage.getItem("memberId")?.toString();
   }
 
   onSubmit() {
@@ -31,6 +30,6 @@ export class SumbitclaimComponent implements OnInit {
         }
       );
   }
-  
+
 
 }

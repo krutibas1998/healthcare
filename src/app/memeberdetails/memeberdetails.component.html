@@ -2,12 +2,12 @@
 
     <h1 class="text-center bookt">HealthCare Member Portal</h1>
     <br>
-    <h2 class="text-center  book">Search Member</h2>
+    <h2 class="text-center  book">Member Details</h2>
     <div class="box">
 
         <div>
             <label class="lab">Member Id</label>
-            <input type="text" class="form-control inp" [(ngModel)]="searchmember.UserId" />
+            <input type="text" class="form-control inp" [(ngModel)]="memberdetails.UserId" />
         </div>
 
         <br>
@@ -44,6 +44,7 @@
                         <td>{{item.claimDate}}</td>
                         <td><a (click)='onSubmit()' class="btn btn-primary" routerLink="/addclaim">Sumbit Claim</a>
                         </td>
+
                     </tr>
                 </tbody>
             </table>

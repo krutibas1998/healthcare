@@ -1,4 +1,4 @@
- <div class="container">
+<div class="container">
 
     <h1 class="text-center bookt">HealthCare Member Portal</h1>
     <br>
@@ -44,15 +44,15 @@
                         <td>{{item.claimDate}}</td>
                         <td><a (click)='onSubmit()' class="btn btn-primary" routerLink="/addclaim">Sumbit Claim</a>
                         </td>
-                        
+
                     </tr>
                 </tbody>
             </table>
         </div>
-    </div> 
+    </div>
 
     <div>
-        <div class="table-responsive p-5" >
+        <div class="table-responsive p-5">
             <table class="table" *ngIf="addmembers.length">
                 <thead class="table-primary">
                     <tr>
@@ -60,11 +60,6 @@
                         <th>FirstName</th>
                         <th>LastName</th>
                         <th>Assigned Physician</th>
-                        <!-- <th>Claim Id</th>
-                        <th>Claim Ammount</th>
-                        <th>Claim Date</th> -->
-                        <th>Sumbit Claim
-                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -73,12 +68,6 @@
                         <td>{{result.firstName}}</td>
                         <td>{{result.lastName}}</td>
                         <td>{{result.physician}}</td>
-                        <!-- <td>{{item.claimId}}</td>
-                        <td>{{item.claimAmmount}}</td>
-                        <td>{{item.claimDate}}</td> -->
-                        <td><a (click)='onSubmit()' class="btn btn-primary" routerLink="/addclaim">Sumbit Claim</a>
-                        </td>
-                        <!-- <td><a (click)='onclick()' router-Link="/addclaim"></a></td> -->
                     </tr>
                 </tbody>
             </table>

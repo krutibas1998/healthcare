@@ -8,6 +8,7 @@ import { SumbitclaimComponent } from './sumbitclaim/sumbitclaim.component';
 import { GetallmembersComponent } from './getallmembers/getallmembers.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
 import { MemberpageComponent } from './memberpage/memberpage.component';
+import { MemeberdetailsComponent } from './memeberdetails/memeberdetails.component';
 const routes: Routes = [
   {path:"",component:LoginComponent},
   {path:"signup", component:SignupComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path:"addclaim", component:SumbitclaimComponent},
   {path:"getallmembers", component:GetallmembersComponent},
   {path:"adminpage", component:AdminpageComponent},
-  {path:"memberpage", component:MemberpageComponent}
+  {path:"memberpage", component:MemberpageComponent},
+  {path:"memberdetails", component:MemeberdetailsComponent}
 ];
 
 @NgModule({

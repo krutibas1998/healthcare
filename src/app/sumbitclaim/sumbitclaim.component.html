@@ -10,13 +10,13 @@
 
     <div>
         <label class="lab">Claim Type</label>
-        <select class="form-control inp" [(ngModel)]="addclaim.ClaimType" >
+        <select class="form-control inp" [(ngModel)]="addclaim.ClaimType">
             <option value="Vision">Vision</option>
             <option value="Dental">Dental</option>
             <option value="Medical">Medical</option>
         </select>
     </div>
-    
+
     <div>
         <label class="lab">Claim Ammount</label>
         <input type="text" class="form-control inp" [(ngModel)]="addclaim.ClaimAmmount" />
@@ -35,8 +35,5 @@
     <br>
 
     <button type="submit" class="buy" (click)="onSubmit()">Save</button>
-    
-    
 
 </div>
-

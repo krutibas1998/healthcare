@@ -1,22 +1,22 @@
-
 <head>
     <style>
-      h1 {text-align: center;}
-   </style>
-    </head>
-    <body>
-        
-                <div class="dgd card p-3 "> 
-                    
-                    <h1 class="text-success dbook">HealthCare Memeber Portal</h1>
-                    <button class="dbook1" routerLink="/login">Logout</button>
-                </div>
-        
-        <div class="row bg-dark p-2" > 
-            <div class="col-md-2 text-center" style="color:white;"><a routerLink="/searchmember">Search Member</a></div>
-            <!-- <div class="col-md-2 text-center" style="color: blue;"><a routerLink="/addmember">Add Member</a></div> -->
-            <!-- <div class="col-md-2 text-center"><a routerLink="getallmembers">Search Member</a> </div> -->
-                        
-        </div>
-    </body>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
 
+<body>
+
+    <div class="dgd card p-3 ">
+
+        <h1 class="text-success dbook">HealthCare Memeber Portal</h1>
+        <div style="color: blue;">Welcome: {{getValue()}}</div>
+        <button class="dbook1" routerLink="">Logout</button>
+    </div>
+
+    <div class="row bg-dark p-2">
+        <div class="col-md-2 text-center" style="color:white;"><a routerLink="/memberdetails">Member Details</a></div>
+
+    </div>
+</body>

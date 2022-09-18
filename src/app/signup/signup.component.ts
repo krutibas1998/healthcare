@@ -9,31 +9,31 @@ import { userService } from '../services/signup.service';
 })
 export class SignupComponent implements OnInit {
 
-  signup:Signup={
-    UserName:'',
-    UserType:'',
-    Password:''
+  signup: Signup = {
+    UserName: '',
+    UserType: '',
+    Password: ''
   }
 
-  constructor(private userService:userService) { }
+  constructor(private userService: userService) { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(){
-    if(this.signup.UserName!==''){
+  onSubmit() {
+    if (this.signup.UserName !== '') {
       this.userService.addUser(this.signup)
-      .subscribe(
-        response => {
-          console.log(response);
-          this.signup = {
-            UserName:'',
-            UserType:'',
-            Password:''
-          };
-        }
-      );
-    } else{
+        .subscribe(
+          response => {
+            console.log(response);
+            this.signup = {
+              UserName: '',
+              UserType: '',
+              Password: ''
+            };
+          }
+        );
+    } else {
       console.log('Login failed');
     }
   }

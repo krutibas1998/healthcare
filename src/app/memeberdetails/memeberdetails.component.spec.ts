@@ -3,11 +3,11 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { GetallmembersComponent } from './getallmembers.component';
+import { MemeberdetailsComponent } from './memeberdetails.component';
 
-describe('GetallmembersComponent', () => {
-  let component: GetallmembersComponent;
-  let fixture: ComponentFixture<GetallmembersComponent>;
+describe('MemeberdetailsComponent', () => {
+  let component: MemeberdetailsComponent;
+  let fixture: ComponentFixture<MemeberdetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -18,13 +18,13 @@ describe('GetallmembersComponent', () => {
       
         
       ],
-      declarations: [ GetallmembersComponent ]
+      declarations: [ MemeberdetailsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GetallmembersComponent);
+    fixture = TestBed.createComponent(MemeberdetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

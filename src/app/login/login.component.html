@@ -1,44 +1,26 @@
-
 <h1 class="text-center bookt">HealthCare Member Portal</h1>
 <br>
 <h2 class="text-center  book">User Login</h2>
 <div class="box">
 
     <div>
-        <label class="lab">UserName</label>
-        <input type="text" class="form-control inp" [(ngModel)]="login.UserName" />
+        <label class="lab">User Name</label>
+        <input type="text" class="form-control inp" name="username" #username="ngModel" required
+            [(ngModel)]="login.UserName" />
+        <div *ngIf="username.errors?.['required'] && username.touched" class="text-danger">User Name is required</div>
     </div>
-    
+
     <div>
         <label class="lab">Password</label>
-        <input type="password" class="form-control inp" [(ngModel)]="login.Password" />
+        <input type="password" class="form-control inp" name="password" #password="ngModel" required
+            [(ngModel)]="login.Password" />
+        <div *ngIf="password.errors?.['required'] && password.touched" class="text-danger">Password is required</div>
     </div>
     <br>
 
     <button type="submit" class="buy" (click)="onSumbit()">Login</button>
     <div class="reg1" routerLink="/signup">New Registration</div>
-    
+    <h6 class="text-center text-danger">{{mes}}</h6>
+
 
 </div>
-
-
-<!-- <div class="container">
-    <h1>User Login</h1>
-    <form #form="ngForm" (ngSubmit)="onSumbit()">
-        <div class="form-group">
-            <label for="">UserName</label>
-            <input type="text" name="UserName" [(ngModel)]="login.UserName">
-        </div>
-        <div class="form-group">
-            <label for="">Password</label>
-            <input type="password" name="Password" [(ngModel)]="login.Password">
-        </div>
-        <div class="form-group">
-            <button>LogIn</button>
-        </div>
-        <div class="form-group">
-            <label for="">New User?</label>
-            <button>New Registration</button>
-        </div>
-    </form>
-</div> -->

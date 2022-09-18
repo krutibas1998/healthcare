@@ -8,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class MemberpageComponent implements OnInit {
 
   constructor() { }
-  result:any="";
+  result: any = "";
   ngOnInit(): void {
-    this.result=localStorage.getItem("token");
+    this.result = localStorage.getItem("token");
+  }
+
+  getValue(): any {
+    return localStorage.getItem("userName")?.toString();
   }
 
 }

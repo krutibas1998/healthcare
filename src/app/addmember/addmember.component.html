@@ -4,43 +4,51 @@
 <div class="box">
 
     <div>
-        <label class="lab">FirstName</label>
-        <input type="text" class="form-control inp" [(ngModel)]="addmember.FirstName" />
+        <label class="lab">First Name</label>
+        <input type="text" class="form-control inp" name="firstname" #firstname="ngModel" required [(ngModel)]="addmember.FirstName" />
+        <div *ngIf="firstname.errors?.['required'] && firstname.touched" class="text-danger">First Name is required</div>
     </div>
     
     <div>
-        <label class="lab">LastName</label>
-        <input type="text" class="form-control inp" [(ngModel)]="addmember.LastName" />
+        <label class="lab">Last Name</label>
+        <input type="text" class="form-control inp" name="lastname" #lastname="ngModel" required [(ngModel)]="addmember.LastName" />
+        <div *ngIf="lastname.errors?.['required'] && lastname.touched" class="text-danger">Last Name is required</div>
     </div>
 
     <div>
-        <label class="lab">UserName</label>
-        <input type="text" class="form-control inp" [(ngModel)]="addmember.UserName" />
+        <label class="lab">User Name</label>
+        <input type="text" class="form-control inp" name="username" #username="ngModel" required [(ngModel)]="addmember.UserName" />
+        <div *ngIf="username.errors?.['required'] && username.touched" class="text-danger">User Name is required</div>
     </div>
 
     <div>
         <label class="lab">Address</label>
-        <input type="text" class="form-control inp" [(ngModel)]="addmember.Address" />
+        <input type="text" class="form-control inp" name="address" #address="ngModel" required [(ngModel)]="addmember.Address" />
+        <div *ngIf="address.errors?.['required'] && address.touched" class="text-danger">Address is required</div>
     </div>
 
     <div>
         <label class="lab">City</label>
-        <input type="text" class="form-control inp" [(ngModel)]="addmember.City" />
+        <input type="text" class="form-control inp" name="city" #city="ngModel" required [(ngModel)]="addmember.City" />
+        <div *ngIf="city.errors?.['required'] && city.touched" class="text-danger">City is required</div>
     </div>
 
     <div>
         <label class="lab">Email</label>
-        <input type="text" class="form-control inp" [(ngModel)]="addmember.Email" />
+        <input type="text" class="form-control inp" name="email" #email="ngModel" required [(ngModel)]="addmember.Email" />
+        <div *ngIf="email.errors?.['required'] && email.touched" class="text-danger">Email is required</div>
     </div>
 
     <div>
         <label class="lab">DOB</label>
-        <input type="date" class="form-control inp" [(ngModel)]="addmember.DateOfBirth" />
+        <input type="date" class="form-control inp" name="dob" #dob="ngModel" required [(ngModel)]="addmember.DateOfBirth" />
+        <div *ngIf="dob.errors?.['required'] && dob.touched" class="text-danger">DOB is required</div>
     </div>
 
     <div>
         <label class="lab">State</label>
-        <input type="text" class="form-control inp" [(ngModel)]="addmember.State" />
+        <input type="text" class="form-control inp" name="state" #state="ngModel" required [(ngModel)]="addmember.State" />
+        <div *ngIf="state.errors?.['required'] && state.touched" class="text-danger">State is required</div>
     </div>
 
     <div>
@@ -55,6 +63,7 @@
     <br>
 
     <button type="submit" class="buy" (click)="onSubmit()">Save</button>
+    <h6 class="text-center text-success">{{msg}}</h6>
     
     
 

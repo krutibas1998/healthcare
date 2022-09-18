@@ -9,19 +9,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./searchmember.component.css']
 })
 export class SearchmemberComponent implements OnInit {
-  
+
 
   searchmember: Searchmember = {
-    UserId:0
+    UserId: 0
   }
-  repo:any ={};
+  repo: any = {};
   resp: any = {};
-  constructor(private SearchmemberService: SearchmemberService, private router:Router) { }
-  result:any="";
+  constructor(private SearchmemberService: SearchmemberService, private router: Router) { }
+  result: any = "";
   ngOnInit(): void {
-    this.result=localStorage.getItem("token");
+    this.result = localStorage.getItem("token");
   }
- 
+
 
   onSubmit(): void {
     this.SearchmemberService.searchmember(this.searchmember).subscribe(response => {
@@ -31,10 +31,6 @@ export class SearchmemberComponent implements OnInit {
       localStorage.getItem("memberId")?.toString();
       localStorage.getItem("token");
 
-      // console.log(localStorage.getItem("UserId")?.toString());
-     
-
-      
     });
   }
 }
